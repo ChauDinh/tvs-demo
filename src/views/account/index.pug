@@ -1,6 +1,11 @@
 h1 Account
 
 p Order list: 
+
+form(action="/account/search", method="GET")
+  input(type="text", name="keyword", value= value)
+  button Search
+
 ul
   each order in orders
     li= order.name

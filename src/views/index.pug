@@ -4,3 +4,14 @@ head
 body
   h1 TVS Pharmacy
   
+  if users.length === 0 
+    h3 Users list
+    button 
+      a(href="/account/register") Register
+  else 
+    h3 Users list
+    button 
+      a(href="/account/register") Register
+    ul
+      each user in users 
+        li= user.username
