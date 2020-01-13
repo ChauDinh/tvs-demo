@@ -34,6 +34,7 @@ app.set("views", "./src/views");
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("./src/public"));
 
 app.get("/", (req, res) => {
   User.find().then(users => {
